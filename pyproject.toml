@@ -1,0 +1,78 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "polymarket-mcp-pro"
+version = "0.1.0"
+description = "Live Polymarket prediction-market data, exposed as MCP tools for Claude, Cursor, and Cline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "LuciferForge", email = "LuciferForge@proton.me" },
+]
+keywords = [
+  "mcp",
+  "model-context-protocol",
+  "polymarket",
+  "prediction-markets",
+  "claude",
+  "cursor",
+  "cline",
+  "fastmcp",
+  "trading",
+  "agents",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business :: Financial",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+  "fastmcp>=0.2.0",
+  "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "pytest-asyncio>=0.23",
+  "respx>=0.21",
+]
+
+[project.urls]
+Homepage = "https://github.com/LuciferForge/polymarket-mcp"
+Documentation = "https://github.com/LuciferForge/polymarket-mcp#readme"
+Issues = "https://github.com/LuciferForge/polymarket-mcp/issues"
+"API"  = "https://api.protodex.io"
+"Dataset" = "https://github.com/LuciferForge/polymarket-historical-data"
+"Trading bot" = "https://github.com/LuciferForge/polymarket-crash-bot"
+
+[project.scripts]
+polymarket-mcp = "polymarket_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["polymarket_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "polymarket_mcp",
+  "examples",
+  "tests",
+  "README.md",
+  "LICENSE",
+  "pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

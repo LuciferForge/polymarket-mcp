@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "polymarket": {
+      "command": "uvx",
+      "args": ["--from", "polymarket-mcp-pro", "polymarket-mcp"],
+      "env": {
+        "POLYMARKET_API_KEY": ""
+      }
+    }
+  }
+}
