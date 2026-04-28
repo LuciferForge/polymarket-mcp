@@ -1,5 +1,9 @@
 # polymarket-mcp
 
+[![PyPI](https://img.shields.io/pypi/v/polymarket-mcp-pro.svg)](https://pypi.org/project/polymarket-mcp-pro/)
+[![Python](https://img.shields.io/pypi/pyversions/polymarket-mcp-pro.svg)](https://pypi.org/project/polymarket-mcp-pro/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 **Live Polymarket prediction-market data, exposed as MCP tools for Claude / Cursor / Cline.**
 
 A [Model Context Protocol](https://modelcontextprotocol.io) server that lets any MCP-compatible AI agent query live Polymarket markets natively — list markets by volume, pull historical price snapshots, find recent crashes (mean-reversion candidates), and inspect order-book depth, all without writing custom HTTP code in your prompts.
