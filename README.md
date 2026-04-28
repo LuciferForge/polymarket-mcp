@@ -170,8 +170,13 @@ Self-serve key issuance is on the roadmap.
 ## Related projects in the LuciferForge stack
 
 - [`api.protodex.io`](https://api.protodex.io) -- the underlying free API this server wraps.
+- [LuciferForge/polymarket-crash-bot](https://github.com/LuciferForge/polymarket-crash-bot) -- the live mean-reversion trading bot (308 trades, 80.2% WR).
+- [`pip install pnl-truthteller`](https://github.com/LuciferForge/pnl-truthteller) -- audit your bot's actual on-chain P&L vs DB-recorded P&L. Wallet address only, no API key.
+- [`pip install cross-signal-data`](https://github.com/LuciferForge/cross-signal-data) -- 308-trade labeled crash-recovery dataset. Free, MIT, also on HuggingFace.
+- [`pip install quant-rollout`](https://github.com/LuciferForge/quant-rollout) -- staged-deployment toolkit (gates, kill switch, veto window) for any trading bot.
+- [`pip install sigil-ta`](https://github.com/LuciferForge/sigil) -- MCP-native TA runtime with the unique Polymarket Sentiment Divergence signal.
+- [LuciferForge/polymarket-v2-migration](https://github.com/LuciferForge/polymarket-v2-migration) -- cookbook for the April 28, 2026 V1→V2 cutover.
 - [LuciferForge/polymarket-historical-data](https://github.com/LuciferForge/polymarket-historical-data) -- the historical Polymarket dataset (CSV / Parquet).
-- [LuciferForge/polymarket-crash-bot](https://github.com/LuciferForge/polymarket-crash-bot) -- the live mean-reversion trading bot built on top of the same data.
 
 These three sit on the same data layer, so anything you can query through this MCP server is exactly what the bot trades on.
 
