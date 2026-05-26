@@ -8,7 +8,7 @@
 
 A [Model Context Protocol](https://modelcontextprotocol.io) server that lets any MCP-compatible AI agent query live Polymarket markets natively — list markets by volume, pull historical price snapshots, find recent crashes (mean-reversion candidates), and inspect order-book depth, all without writing custom HTTP code in your prompts.
 
-Backed by [`api.protodex.io`](https://api.protodex.io) — the LuciferForge Polymarket data layer indexing **9,500+ markets** with a price snapshot every 15 minutes.
+Backed by [`api.protodex.io`](https://api.protodex.io) — the LuciferForge Polymarket data layer indexing **15,600+ markets** with a price snapshot every 15 minutes (15M+ snapshots and counting).
 
 > Why this exists: Polymarket has a public API but no MCP-native interface. Generic LLM tools can search the web for stale wiki entries; this gives your agent **live, structured prediction-market data** with crash signals it can reason over directly.
 
